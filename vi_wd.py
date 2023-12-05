@@ -181,12 +181,9 @@ entry2 = Entry(root, textvariable=entry_text2)
 entry2.place(relx=0.07,rely=0.2,relwidth=0.4,height=23)
 def get_path():
     global path
-    # 返回一个字符串，且只能获取文件夹路径，不能获取文件的路径。
+   
     path = filedialog.askdirectory()
-    # 返回一个字符串，可以获取到任意文件的路径。
-    #path = filedialog.askopenfilename(title='请选择文件')
-    # 生成保存文件的对话框， 选择的是一个文件而不是一个文件夹，返回一个字符串。
-    # path = filedialog.asksaveasfilename(title='请输入保存的路径')
+
     entry_text2.set(path)
 
 button4 = Button(root, text='选择保存路径', command=get_path)
